@@ -119,6 +119,14 @@
     }
   });
 
+  // Block pinch and double-tap zoom on the remote (iOS fires gesture* events, others use multi-touch)
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (type) {
+    document.addEventListener(type, function (e) { e.preventDefault(); }, { passive: false });
+  });
+  document.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches.length > 1) e.preventDefault();
+  }, { passive: false });
+
   var saved = TV.saved();
   setEnabled(false);
   if (saved.ip) {

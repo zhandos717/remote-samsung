@@ -151,6 +151,7 @@ body {
 }
 
 .remote-app {
+  touch-action: manipulation;
   max-width: 420px;
   margin: 0 auto;
   min-height: 100vh;
