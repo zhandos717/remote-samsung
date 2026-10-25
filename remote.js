@@ -2,6 +2,12 @@
 // and turns touchpad gestures into D-pad presses (swipe) and OK (tap).
 (function () {
   var statusEl = document.getElementById('status');
+  var updateBtn = document.getElementById('updateBtn');
+
+  Updater.onState(function (state) {
+    if (state === 'ready') updateBtn.hidden = false;
+  });
+  updateBtn.addEventListener('click', function () { Updater.apply(); });
   var touchpad = document.getElementById('touchpad');
   var touchHint = document.getElementById('touchHint');
   var keys = document.querySelectorAll('.key');

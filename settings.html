@@ -26,12 +26,23 @@
       <p class="hint">Адрес указан в настройках сети ТВ или в роутере. Если ТВ спросит разрешение, нажмите «Разрешить».</p>
     </section>
 
+    <section class="connect">
+      <label>Приложение</label>
+      <div class="row">
+        <button id="checkUpdateBtn" class="primary">Проверить обновления</button>
+        <button id="applyUpdateBtn" class="primary" hidden>Установить</button>
+      </div>
+      <div class="status" id="updateStatus">Версия: установлена</div>
+    </section>
+
     <section class="foot">
       <button id="forgetBtn" class="ghost">Забыть ТВ</button>
     </section>
   </main>
 
   <script src="tv.js"></script>
+  <script src="update.js"></script>
   <script src="settings.js"></script>
+  <script>Updater.init();</script>
 </body>
 </html>

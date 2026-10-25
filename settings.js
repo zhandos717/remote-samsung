@@ -48,4 +48,32 @@
   } else {
     ipInput.value = TV.DEFAULT_IP_PREFIX;
   }
+  // App updates
+  var checkUpdateBtn = document.getElementById('checkUpdateBtn');
+  var applyUpdateBtn = document.getElementById('applyUpdateBtn');
+  var updateStatus = document.getElementById('updateStatus');
+
+  Updater.onState(function (state) {
+    if (state === 'ready') {
+      updateStatus.textContent = 'Есть новая версия приложения';
+      updateStatus.className = 'status ok';
+      applyUpdateBtn.hidden = false;
+    } else {
+      updateStatus.textContent = 'Новых версий нет';
+      updateStatus.className = 'status';
+    }
+    checkUpdateBtn.disabled = false;
+  });
+
+  checkUpdateBtn.addEventListener('click', function () {
+    checkUpdateBtn.disabled = true;
+    updateStatus.textContent = 'Проверяю…';
+    updateStatus.className = 'status';
+    Updater.check();
+  });
+
+  applyUpdateBtn.addEventListener('click', function () {
+    updateStatus.textContent = 'Устанавливаю…';
+    Updater.apply();
+  });
 })();

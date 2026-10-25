@@ -15,6 +15,7 @@
   <main class="remote-app">
     <header class="top">
       <div class="status" id="status">Не подключено</div>
+      <button class="update-btn" id="updateBtn" hidden>Обновить</button>
       <a class="settings-link" href="settings.html" aria-label="Настройки">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.9 4.2-.9-.5c.1-.6.1-1.1 0-1.7l.9-.5a.8.8 0 0 0 .3-1.1l-1.2-2a.8.8 0 0 0-1.1-.3l-.9.5a6.9 6.9 0 0 0-1.5-.9V4.1a.8.8 0 0 0-.8-.8h-2.4a.8.8 0 0 0-.8.8v1.1c-.5.2-1 .5-1.5.9l-.9-.5a.8.8 0 0 0-1.1.3l-1.2 2a.8.8 0 0 0 .3 1.1l.9.5c-.1.6-.1 1.1 0 1.7l-.9.5a.8.8 0 0 0-.3 1.1l1.2 2c.2.4.7.5 1.1.3l.9-.5c.5.4 1 .7 1.5.9v1.1c0 .4.4.8.8.8h2.4c.4 0 .8-.4.8-.8v-1.1c.5-.2 1-.5 1.5-.9l.9.5c.4.2.9.1 1.1-.3l1.2-2a.8.8 0 0 0-.3-1.1Z"/></svg>
       </a>
@@ -59,11 +60,8 @@
   </main>
 
   <script src="tv.js"></script>
+  <script src="update.js"></script>
   <script src="remote.js"></script>
-  <script>
-    if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
-      navigator.serviceWorker.register('sw.js').catch(function () { /* offline install is optional */ });
-    }
-  </script>
+  <script>Updater.init();</script>
 </body>
 </html>

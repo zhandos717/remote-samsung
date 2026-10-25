@@ -248,3 +248,14 @@ body {
 @media (min-width: 900px) {
   .remote-app { max-width: 460px; }
 }
+
+/* In-app update button */
+.update-btn {
+  min-height: 0;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  background: var(--accent);
+  color: #fff;
+}
+[hidden] { display: none !important; }

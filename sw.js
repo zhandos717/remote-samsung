@@ -1,9 +1,9 @@
 // Service worker: caches the app shell so the remote opens without network.
 // The TV connection is a websocket, which the service worker never touches.
-var CACHE = 'tv-remote-v2';
+var CACHE = 'tv-remote-v3';
 var SHELL = [
   './', './index.html', './settings.html', './styles.css',
-  './tv.js', './remote.js', './settings.js',
+  './tv.js', './update.js', './remote.js', './settings.js',
   './manifest.json', './icon-192.png', './icon-512.png'
 ];
 
@@ -11,7 +11,11 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE).then(function (cache) { return cache.addAll(SHELL); })
   );
-  self.skipWaiting();
+  // Do not skip waiting here: the page asks for it via SKIP_WAITING, so the user chooses when to update
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data === 'SKIP_WAITING') self.skipWaiting();
 });
 
 self.addEventListener('activate', function (event) {
