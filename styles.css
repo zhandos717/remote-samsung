@@ -110,3 +110,23 @@ button.ghost { background: transparent; color: var(--text-dim); }
 .foot { text-align: center; }
 
 [hidden] { display: none !important; }
+
+/* Touch-friendly sizes for phones */
+.wrap { padding: max(16px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom)); }
+h1 { font-size: 20px; font-weight: 600; margin: 4px 4px 0; }
+.connect label { font-size: 15px; }
+input {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  padding: 14px;
+  min-height: 56px;
+  font-variant-numeric: tabular-nums;
+}
+input:focus { outline: 2px solid var(--accent); outline-offset: 0; }
+.row button.primary { min-height: 56px; font-size: 17px; }
+button.key { min-height: 56px; font-size: 17px; }
+.dpad { max-width: 340px; }
+.status { font-size: 15px; min-height: 22px; }
+.status::before { content: '● '; color: var(--text-dim); }
+.status.ok::before { color: var(--ok); }
+.status.bad::before { color: var(--bad); }

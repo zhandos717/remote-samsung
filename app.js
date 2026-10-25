@@ -5,6 +5,7 @@
 (function () {
   var APP_NAME = 'TV Remote';
   var STORE_KEY = 'tvRemote.v1';
+  var DEFAULT_IP_PREFIX = '192.168.0.';  // most home networks; the user types only the last number
 
   var ipInput = document.getElementById('ipInput');
   var connectBtn = document.getElementById('connectBtn');
@@ -144,11 +145,17 @@
     if (e.key === 'Enter') connectBtn.click();
   });
 
+  // Put the caret at the end so the user only types the last part of the address
+  ipInput.addEventListener('focus', function () {
+    var v = ipInput.value;
+    setTimeout(function () { ipInput.setSelectionRange(v.length, v.length); }, 0);
+  });
+
   forgetBtn.addEventListener('click', function () {
     saveStore({});
     token = '';
     if (ws) { try { ws.close(); } catch (e) { /* ignore */ } }
-    ipInput.value = '';
+    ipInput.value = DEFAULT_IP_PREFIX;
     setStatus('Данные ТВ забыты');
     setConnected(false);
   });
@@ -158,6 +165,8 @@
   if (saved.ip) {
     ipInput.value = saved.ip;
     token = saved.token || '';
+  } else {
+    ipInput.value = DEFAULT_IP_PREFIX;
   }
   setConnected(false);
 })();
