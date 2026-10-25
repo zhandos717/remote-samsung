@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>TV Remote</title>
   <meta name="theme-color" content="#0b0b0d">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,47 +12,49 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="wrap">
-    <header class="bar">
-      <h1>Пульт Samsung</h1>
-      <a class="settings-link" href="settings.html" aria-label="Настройки">Настройки</a>
+  <main class="remote-app">
+    <header class="top">
+      <div class="status" id="status">Не подключено</div>
+      <a class="settings-link" href="settings.html" aria-label="Настройки">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.9 4.2-.9-.5c.1-.6.1-1.1 0-1.7l.9-.5a.8.8 0 0 0 .3-1.1l-1.2-2a.8.8 0 0 0-1.1-.3l-.9.5a6.9 6.9 0 0 0-1.5-.9V4.1a.8.8 0 0 0-.8-.8h-2.4a.8.8 0 0 0-.8.8v1.1c-.5.2-1 .5-1.5.9l-.9-.5a.8.8 0 0 0-1.1.3l-1.2 2a.8.8 0 0 0 .3 1.1l.9.5c-.1.6-.1 1.1 0 1.7l-.9.5a.8.8 0 0 0-.3 1.1l1.2 2c.2.4.7.5 1.1.3l.9-.5c.5.4 1 .7 1.5.9v1.1c0 .4.4.8.8.8h2.4c.4 0 .8-.4.8-.8v-1.1c.5-.2 1-.5 1.5-.9l.9.5c.4.2.9.1 1.1-.3l1.2-2a.8.8 0 0 0-.3-1.1Z"/></svg>
+      </a>
     </header>
 
-    <div class="status" id="status">Не подключено</div>
+    <!-- Swipe surface: swipe to move the focus, tap to press OK -->
+    <section class="touchpad" id="touchpad" aria-label="Тачпад: свайп для навигации, тап для OK">
+      <div class="touch-hint" id="touchHint">Свайп — навигация<br>Тап — OK</div>
+    </section>
 
-    <section class="remote" id="remote" aria-label="Пульт">
-      <div class="dpad">
-        <button class="key ok" data-key="KEY_ENTER">OK</button>
-        <button class="key up" data-key="KEY_UP" aria-label="Вверх">▲</button>
-        <button class="key left" data-key="KEY_LEFT" aria-label="Влево">◀</button>
-        <button class="key right" data-key="KEY_RIGHT" aria-label="Вправо">▶</button>
-        <button class="key down" data-key="KEY_DOWN" aria-label="Вниз">▼</button>
-      </div>
+    <section class="buttons">
+      <button class="round key" data-key="KEY_RETURN" aria-label="Назад">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z"/></svg>
+      </button>
+      <button class="round key" data-key="KEY_HOME" aria-label="Главная">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 3 2.5 11h2.9v9h5.2v-6h3.8v6h5.2v-9h2.9z"/></svg>
+      </button>
+      <button class="round key" data-key="KEY_PAUSE" aria-label="Пауза">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+      </button>
+      <button class="round key" data-key="KEY_PLAY" aria-label="Играть">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
+      </button>
+    </section>
 
-      <div class="grid3">
-        <button class="key" data-key="KEY_RETURN">Назад</button>
-        <button class="key" data-key="KEY_HOME">Главная</button>
-        <button class="key" data-key="KEY_MENU">Меню</button>
+    <section class="volume-row">
+      <div class="pill">
+        <button class="key" data-key="KEY_VOLDOWN" aria-label="Тише">−</button>
+        <button class="key" data-key="KEY_MUTE" aria-label="Без звука">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+        </button>
+        <button class="key" data-key="KEY_VOLUP" aria-label="Громче">+</button>
       </div>
-
-      <div class="grid2">
-        <div class="pair">
-          <button class="key" data-key="KEY_VOLUP">Громче</button>
-          <button class="key" data-key="KEY_VOLDOWN">Тише</button>
-          <button class="key" data-key="KEY_MUTE">Без звука</button>
-        </div>
-        <div class="pair">
-          <button class="key" data-key="KEY_CHUP">Канал +</button>
-          <button class="key" data-key="KEY_CHDOWN">Канал −</button>
-          <button class="key power" data-key="KEY_POWER">Питание</button>
-        </div>
+      <div class="pill">
+        <button class="key" data-key="KEY_CHDOWN" aria-label="Канал вниз">Канал −</button>
+        <button class="key" data-key="KEY_CHUP" aria-label="Канал вверх">Канал +</button>
       </div>
-
-      <div class="grid3">
-        <button class="key" data-key="KEY_PLAY">Play</button>
-        <button class="key" data-key="KEY_PAUSE">Pause</button>
-        <button class="key" data-key="KEY_STOP">Stop</button>
-      </div>
+      <button class="round power key" data-key="KEY_POWER" aria-label="Питание">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M11 2h2v10h-2zM7.8 4.9l1.4 1.4A6.5 6.5 0 1 0 15 5.3l1.4-1.4A8.5 8.5 0 1 1 7.8 4.9z"/></svg>
+      </button>
     </section>
   </main>
 
