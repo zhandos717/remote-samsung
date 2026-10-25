@@ -25,7 +25,7 @@
   connectBtn.addEventListener('click', function () {
     var host = ipInput.value.trim();
     if (!/^\d{1,3}(\.\d{1,3}){3}$/.test(host)) {
-      setStatus('Введите IP полностью, например 192.168.0.23', 'bad');
+      setStatus('Введите IP полностью, например 192.168.1.50', 'bad');
       return;
     }
     TV.connect(host, onStatus);
