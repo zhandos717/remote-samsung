@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Remote</title>
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="connect" id="connectPanel">
+      <label for="ipInput">IP телевизора</label>
+      <div class="row">
+        <input id="ipInput" type="text" inputmode="decimal" placeholder="IP телевизора" autocomplete="off">
+        <button id="connectBtn" class="primary">Подключить</button>
+      </div>
+      <div class="status" id="status">Не подключено</div>
+    </section>
+
+    <section class="remote" id="remote" aria-label="Пульт">
+      <div class="dpad">
+        <button class="key ok" data-key="KEY_ENTER">OK</button>
+        <button class="key up" data-key="KEY_UP" aria-label="Вверх">▲</button>
+        <button class="key left" data-key="KEY_LEFT" aria-label="Влево">◀</button>
+        <button class="key right" data-key="KEY_RIGHT" aria-label="Вправо">▶</button>
+        <button class="key down" data-key="KEY_DOWN" aria-label="Вниз">▼</button>
+      </div>
+
+      <div class="grid3">
+        <button class="key" data-key="KEY_RETURN">Назад</button>
+        <button class="key" data-key="KEY_HOME">Главная</button>
+        <button class="key" data-key="KEY_MENU">Меню</button>
+      </div>
+
+      <div class="grid2">
+        <div class="pair">
+          <button class="key" data-key="KEY_VOLUP">Громче</button>
+          <button class="key" data-key="KEY_VOLDOWN">Тише</button>
+          <button class="key" data-key="KEY_MUTE">Без звука</button>
+        </div>
+        <div class="pair">
+          <button class="key" data-key="KEY_CHUP">Канал +</button>
+          <button class="key" data-key="KEY_CHDOWN">Канал −</button>
+          <button class="key power" data-key="KEY_POWER">Питание</button>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <button class="key" data-key="KEY_PLAY">Play</button>
+        <button class="key" data-key="KEY_PAUSE">Pause</button>
+        <button class="key" data-key="KEY_STOP">Stop</button>
+      </div>
+    </section>
+
+    <section class="foot">
+      <button id="forgetBtn" class="ghost">Забыть ТВ</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Register the service worker when the page is served over HTTP(S) (not file://)
+    if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+      navigator.serviceWorker.register('sw.js').catch(function () { /* offline install is optional */ });
+    }
+  </script>
+</body>
+</html>
