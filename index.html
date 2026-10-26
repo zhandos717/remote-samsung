@@ -17,41 +17,41 @@
       <div class="status" id="status">Не подключено</div>
       <button class="update-btn" id="updateBtn" hidden>Обновить</button>
       <a class="settings-link" href="settings.html" aria-label="Настройки">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.9 4.2-.9-.5c.1-.6.1-1.1 0-1.7l.9-.5a.8.8 0 0 0 .3-1.1l-1.2-2a.8.8 0 0 0-1.1-.3l-.9.5a6.9 6.9 0 0 0-1.5-.9V4.1a.8.8 0 0 0-.8-.8h-2.4a.8.8 0 0 0-.8.8v1.1c-.5.2-1 .5-1.5.9l-.9-.5a.8.8 0 0 0-1.1.3l-1.2 2a.8.8 0 0 0 .3 1.1l.9.5c-.1.6-.1 1.1 0 1.7l-.9.5a.8.8 0 0 0-.3 1.1l1.2 2c.2.4.7.5 1.1.3l.9-.5c.5.4 1 .7 1.5.9v1.1c0 .4.4.8.8.8h2.4c.4 0 .8-.4.8-.8v-1.1c.5-.2 1-.5 1.5-.9l.9.5c.4.2.9.1 1.1-.3l1.2-2a.8.8 0 0 0-.3-1.1Z"/></svg>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
       </a>
     </header>
 
     <!-- Arrows: press to move the focus on the TV, OK in the middle -->
     <section class="dpad" aria-label="Стрелки">
-      <button class="key dir up" data-key="KEY_UP" aria-label="Вверх">▲</button>
-      <button class="key dir left" data-key="KEY_LEFT" aria-label="Влево">◀</button>
+      <button class="key dir up" data-key="KEY_UP" aria-label="Вверх"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.59 14.59L12 10l-4.59 4.59L6 13.17l6-6 6 6z"/></svg></button>
+      <button class="key dir left" data-key="KEY_LEFT" aria-label="Влево"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/></svg></button>
       <button class="key dir ok" data-key="KEY_ENTER">OK</button>
-      <button class="key dir right" data-key="KEY_RIGHT" aria-label="Вправо">▶</button>
-      <button class="key dir down" data-key="KEY_DOWN" aria-label="Вниз">▼</button>
+      <button class="key dir right" data-key="KEY_RIGHT" aria-label="Вправо"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></button>
+      <button class="key dir down" data-key="KEY_DOWN" aria-label="Вниз"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg></button>
     </section>
 
     <section class="buttons">
       <div class="item">
         <button class="round key" data-key="KEY_RETURN" aria-label="Назад">
-          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
         </button>
         <span class="label">Назад</span>
       </div>
       <div class="item">
         <button class="round key" data-key="KEY_HOME" aria-label="Главная">
-          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 3 2.5 11h2.9v9h5.2v-6h3.8v6h5.2v-9h2.9z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
         </button>
         <span class="label">Главная</span>
       </div>
       <div class="item">
         <button class="round key" data-key="KEY_PAUSE" aria-label="Пауза">
-          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
         <span class="label">Пауза</span>
       </div>
       <div class="item">
         <button class="round key" data-key="KEY_PLAY" aria-label="Играть">
-          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
         </button>
         <span class="label">Играть</span>
       </div>
@@ -59,18 +59,26 @@
 
     <section class="volume-row">
       <div class="pill">
-        <button class="key" data-key="KEY_VOLDOWN" aria-label="Тише">−</button>
-        <button class="key" data-key="KEY_MUTE" aria-label="Без звука">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+        <button class="key" data-key="KEY_VOLDOWN" aria-label="Тише">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 13H5v-2h14v2z"/></svg>
         </button>
-        <button class="key" data-key="KEY_VOLUP" aria-label="Громче">+</button>
+        <button class="key" data-key="KEY_MUTE" aria-label="Без звука">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+        </button>
+        <button class="key" data-key="KEY_VOLUP" aria-label="Громче">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+        </button>
       </div>
       <div class="pill">
-        <button class="key" data-key="KEY_CHDOWN" aria-label="Канал вниз">Канал −</button>
-        <button class="key" data-key="KEY_CHUP" aria-label="Канал вверх">Канал +</button>
+        <button class="key" data-key="KEY_CHDOWN" aria-label="Канал вниз">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+        </button>
+        <button class="key" data-key="KEY_CHUP" aria-label="Канал вверх">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.59 14.59L12 10l-4.59 4.59L6 13.17l6-6 6 6z"/></svg>
+        </button>
       </div>
       <button class="round power key" data-key="KEY_POWER" aria-label="Питание">
-        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M11 2h2v10h-2zM7.8 4.9l1.4 1.4A6.5 6.5 0 1 0 15 5.3l1.4-1.4A8.5 8.5 0 1 1 7.8 4.9z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 3h-2v10h2V3zm4.83 2.17l-1.42 1.42C17.99 7.86 19 9.81 19 12c0 3.87-3.13 7-7 7s-7-3.13-7-7c0-2.19 1.01-4.14 2.58-5.42L6.17 5.17C4.23 6.82 3 9.26 3 12c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.74-1.23-5.18-3.17-6.83z"/></svg>
       </button>
     </section>
   </main>

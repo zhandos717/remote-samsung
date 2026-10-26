@@ -319,3 +319,11 @@ body {
 .remote-app { justify-content: center; }
 .dpad { grid-template-columns: repeat(3, 76px); justify-content: center; max-width: none; }
 .dpad .dir { border-radius: 50%; }
+
+/* Icons: one size everywhere, no font glyphs */
+.remote-app svg { width: 26px; height: 26px; display: block; }
+.dpad svg { width: 34px; height: 34px; }
+.settings-link svg { width: 22px; height: 22px; }
+.pill svg { width: 24px; height: 24px; }
+.round.power svg { width: 26px; height: 26px; }
+.dpad svg { width: 40px; height: 40px; }
