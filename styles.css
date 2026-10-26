@@ -284,3 +284,25 @@ body {
 
 /* Smaller swipe surface so the arrows fit on screen */
 .touchpad { min-height: 30vh; }
+
+/* Fit the whole remote on one iPhone screen (375x667 up to 430x932) */
+.remote-app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: auto;
+  gap: 12px;
+  padding-top: max(12px, env(safe-area-inset-top));
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+.touchpad {
+  flex: 0 0 auto;
+  height: clamp(120px, 22vh, 230px);
+  min-height: 0;
+  border-radius: 28px;
+}
+.dpad { max-width: 210px; grid-template-rows: repeat(3, 46px); gap: 8px; }
+.dpad .ok { font-size: 15px; }
+.buttons .round { width: 56px; height: 56px; }
+.volume-row .pill { height: 48px; }
+.volume-row .round.power { width: 48px; height: 48px; }
+.label { font-size: 11px; }
