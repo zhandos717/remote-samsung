@@ -306,3 +306,16 @@ body {
 .volume-row .pill { height: 48px; }
 .volume-row .round.power { width: 48px; height: 48px; }
 .label { font-size: 11px; }
+
+/* Buttons only: the arrow pad takes the space the touchpad used to have */
+.dpad {
+  max-width: 280px;
+  grid-template-rows: repeat(3, 76px);
+  gap: 12px;
+  margin: 8px auto;
+}
+.dpad .dir { font-size: 22px; }
+.dpad .ok { font-size: 18px; }
+.remote-app { justify-content: center; }
+.dpad { grid-template-columns: repeat(3, 76px); justify-content: center; max-width: none; }
+.dpad .dir { border-radius: 50%; }
