@@ -26,19 +26,40 @@
       <div class="touch-hint" id="touchHint">Свайп — навигация<br>Тап — OK</div>
     </section>
 
+    <!-- Explicit arrows for those who prefer buttons to swipes -->
+    <section class="dpad" aria-label="Стрелки">
+      <button class="key dir up" data-key="KEY_UP" aria-label="Вверх">▲</button>
+      <button class="key dir left" data-key="KEY_LEFT" aria-label="Влево">◀</button>
+      <button class="key dir ok" data-key="KEY_ENTER">OK</button>
+      <button class="key dir right" data-key="KEY_RIGHT" aria-label="Вправо">▶</button>
+      <button class="key dir down" data-key="KEY_DOWN" aria-label="Вниз">▼</button>
+    </section>
+
     <section class="buttons">
-      <button class="round key" data-key="KEY_RETURN" aria-label="Назад">
-        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z"/></svg>
-      </button>
-      <button class="round key" data-key="KEY_HOME" aria-label="Главная">
-        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 3 2.5 11h2.9v9h5.2v-6h3.8v6h5.2v-9h2.9z"/></svg>
-      </button>
-      <button class="round key" data-key="KEY_PAUSE" aria-label="Пауза">
-        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
-      </button>
-      <button class="round key" data-key="KEY_PLAY" aria-label="Играть">
-        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
-      </button>
+      <div class="item">
+        <button class="round key" data-key="KEY_RETURN" aria-label="Назад">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z"/></svg>
+        </button>
+        <span class="label">Назад</span>
+      </div>
+      <div class="item">
+        <button class="round key" data-key="KEY_HOME" aria-label="Главная">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 3 2.5 11h2.9v9h5.2v-6h3.8v6h5.2v-9h2.9z"/></svg>
+        </button>
+        <span class="label">Главная</span>
+      </div>
+      <div class="item">
+        <button class="round key" data-key="KEY_PAUSE" aria-label="Пауза">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+        </button>
+        <span class="label">Пауза</span>
+      </div>
+      <div class="item">
+        <button class="round key" data-key="KEY_PLAY" aria-label="Играть">
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg>
+        </button>
+        <span class="label">Играть</span>
+      </div>
     </section>
 
     <section class="volume-row">

@@ -12,7 +12,7 @@
   var touchHint = document.getElementById('touchHint');
   var keys = document.querySelectorAll('.key');
 
-  var STEP = 36;          // px of movement per directional press
+  var STEP = 60;          // px of movement per directional press (less jumpy than 36)
   var TAP_MOVE = 10;      // px; less than this counts as a tap
   var TAP_TIME = 300;     // ms; shorter than this counts as a tap
 
